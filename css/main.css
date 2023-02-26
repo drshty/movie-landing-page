@@ -16,8 +16,20 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 33px 9%;
-  background: transparent;
+  padding: 15px 4%;
+  background: linear-gradient(506.59deg,
+      #4e6e81 -7%,
+      #2e3840 5.53%,
+      black 48.53%,
+      #ff0303 110.52%);
+  box-shadow: 0 0 15px black;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  50% {
+    opacity: 0.7;
+  }
 }
 
 .logo {
@@ -56,17 +68,18 @@ header {
   height: 100%;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(
-    245.59deg,
-    #4e6e81 0%,
-    #ff0303 28.53%,
-    #2e3840 72.52%
-  );
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+}
+
+.wrapper-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
 }
 
 section {
@@ -77,7 +90,8 @@ section {
   font-size: 14px;
   font-weight: 400;
   color: #f9dbbb;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  text-shadow: 0 0 10px black;
 }
 
 .hero-text h1 {
@@ -85,26 +99,24 @@ section {
   font-size: 80px;
   line-height: 1;
   color: #f9dbbb;
-  margin: 0 0 40px;
+  margin: 0 0 45px;
+  text-shadow: 0 0 10px black;
 }
 
 .hero-text h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #f9dbbb;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px black;
 }
 
 .hero-text p {
   color: #f9dbbb;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.9;
   margin-bottom: 40px;
-}
-
-.hero-img img {
-  width: 550px;
-  height: auto;
+  text-shadow: 0 0 10px black;
 }
 
 .hero-text a {
@@ -119,6 +131,7 @@ section {
   text-transform: uppercase;
   transition: all 0.55s ease;
 }
+
 .hero-text a:hover {
   background: transparent;
   border: 1px solid #f9dbbb;
@@ -127,8 +140,8 @@ section {
 }
 
 .hero-text a.ctaa {
-  color: #f9dbbb;
   background: transparent;
+  color: #f9dbbb;
   border: 1px solid #f9dbbb;
   margin-left: 20px;
 }
@@ -141,16 +154,16 @@ section {
 .icons {
   position: absolute;
   top: 50%;
-  padding: 0 3%;
+  padding: 0 6%;
   transform: translatey(-50%);
 }
 
 .icons i {
   display: block;
-  margin: 26px 0; 
-  font-size: 40px;
+  margin: 26px 0;
+  font-size: 24px;
   color: #f9dbbb;
-  transition: all 0.5s ease;
+  transition: all 0.50s ease;
 }
 
 .icons i:hover {
@@ -166,10 +179,10 @@ section {
 
 .scroll-down i {
   display: block;
-  padding: 10px;
-  font-size: 20px;
+  padding: 12px;
+  font-size: 25px;
   color: #f9dbbb;
-  border-radius: 50%;
+  border-radius: 30px;
   text-shadow: 0 0 7px #2e3840;
   transition: all 0.5s ease;
 }
@@ -183,12 +196,14 @@ section {
 @media (max-width: 1535px) {
   header {
     padding: 15px 3%;
-    transition: 0.2s;
+    transition: all 0.55s ease-in;
   }
+
   .icons {
     padding: 0 3%;
     transition: 0.2s;
   }
+
   .scroll-down {
     right: 3%;
     transition: 0.2s;
@@ -197,20 +212,27 @@ section {
 
 @media (max-width: 1460px) {
   section {
-    padding: 0.12%;
+    padding: 11.12%;
     transition: 0.2s;
   }
 }
 
 @media (max-width: 1340px) {
+  section {
+    padding: 9.3%;
+    transition: 0.2s;
+  }
+
   .hero-img img {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
+
   .hero-text h1 {
     font-size: 75px;
     margin: 0 0 30px;
   }
+
   .hero-text h5 {
     margin-bottom: 25px;
   }
@@ -218,27 +240,33 @@ section {
 
 @media (max-width: 1195px) {
   section {
-    padding: 0.3%;
+    padding: 4.3%;
     transition: 0.2s;
   }
+
   .hero-text {
     padding-top: 115px;
   }
+
   .hero-img {
     text-align: center;
   }
+
   .hero-img img {
     width: 560px;
     height: auto;
   }
+
   .hero {
     height: 100%;
     gap: 1rem;
     grid-template-columns: 1fr;
   }
+
   .icons {
     display: none;
   }
+
   .scroll-down {
     display: none;
   }
@@ -248,27 +276,35 @@ section {
   #menu-icon {
     display: block;
   }
+
   .navlist {
     position: absolute;
-    top: 100%;
-    right: 0;
-    width: 300px;
+    top: 99%;
+    right: -100%;
+    width: 250px;
     height: 40vh;
-    background: #f9dbbb;
+    background: linear-gradient(736.59deg,
+        #4e6e81 -8%,
+        #2e3840 7.53%,
+        black 48.53%,
+        #ff0303 123.52%);
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 50px 20px;
-    transition: all 0.5s ease;
+    padding: 14px;
+    transition: all 0.55s ease;
+    opacity: 0.9;
   }
+
   .navlist a {
-    color: #2e3840;
     margin-left: 0;
     display: block;
-    margin: 3px 0;
+    margin: 7px 0;
+    color: #f9dbbb;
   }
-  .navlist.hide{
-    display: none;
+
+  .navlist.open {
+    right: 0;
   }
 }
 
