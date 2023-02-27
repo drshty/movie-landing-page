@@ -5,6 +5,7 @@
   font-family: "Poppins", sans-serif;
   text-decoration: none;
   list-style: none;
+  /* overflow: hidden; */
 }
 
 header {
@@ -23,13 +24,31 @@ header {
       black 48.53%,
       #ff0303 110.52%);
   box-shadow: 0 0 15px black;
-  animation: mymove 5s infinite;
+  animation: mymove 4s infinite;
 }
 
 @keyframes mymove {
   50% {
     opacity: 0.7;
   }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2e3840;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(82deg,
+      #4e6e81 -17%,
+      #2e3840 -49.47%,
+      black 48.53%,
+      #ff0303 105.52%);
 }
 
 .logo {
@@ -313,4 +332,54 @@ section {
     width: 100%;
     height: auto;
   }
+}
+
+.footer-wrapper {
+  background: #1d2328;
+  align-items: center;
+  padding: 10px;
+  height: 100%;
+  display: grid;
+  color: #f9dbbb;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  grid-template-columns: repeat(3, 2fr);
+  position: relative;
+}
+
+.about {
+  text-align: justify;
+  height: 400px;
+}
+
+.about-text {
+  font-size: 14px;
+  padding: 10px 20px 10px 0;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.about h1 {
+  font-family: "Quintessential", cursive;
+  margin-bottom: 15px;
+  text-transform: uppercase
+}
+
+.about h2 {
+  font-family: "Quintessential", cursive;
+  font-size: 17px;
+  margin-bottom: 20px;
+  text-transform: uppercase
+}
+
+.movie-img {
+  padding: 100px;
+}
+
+.info h1{
+  font-family: "Quintessential", cursive;
+  text-align: center;
+}
+
+span{
 }
