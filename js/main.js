@@ -8,7 +8,7 @@ menu.addEventListener("click", () => {
 
 document.querySelector("#scrolling").addEventListener("click", () => {
   window.scroll({
-    top: 600,
+    top: 700,
     behavior: "smooth",
   });
 });
